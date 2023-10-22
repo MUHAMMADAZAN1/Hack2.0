@@ -4,7 +4,8 @@
 //the program about to find distance between two place
 int main(){
     //made variable according the program
-    double latitudeOrigin,latitudeDestination,longtitudeOrigin,longtitudeDestination;
+    double latitudo,latitudeDesti,longtitudeO,longtitudeDesti;
     double airDistance, delta
+
     return 0;
 }
