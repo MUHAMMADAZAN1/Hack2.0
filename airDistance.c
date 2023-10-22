@@ -11,8 +11,14 @@ int main(){
     //prompt msg to user to get input and user should give input in degree
     printf("\t\tEnter the values in Degree\t\t\n");
     printf("Enter the value of Latitude and Longtitude of Origin(Latitude,longtitude):");
-    scanf("%lf,%lf",&latitudeO,&longtitudeO);
+    scanf("%lf,%lf",&latitudo,&longtitudeO);
     printf("Enter the value of Latitude and Longtitude of Destination(latitude ,longtitude):");
     scanf("%lf,%lf",&latitudeDesti,&longtitudeDesti);
+     //Degree convert to redia(redian=pi/180 *degree)
+    latitudeO*=(M_PI/180);
+    latitudeDesti*=(M_PI/180);
+    longtitudeO*=(M_PI/180);
+    longtitudeDesti*=(M_PI/180);
+
     return 0;
 }
