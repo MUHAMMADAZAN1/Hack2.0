@@ -15,10 +15,18 @@ int main(){
     printf("Enter the value of Latitude and Longtitude of Destination(latitude ,longtitude):");
     scanf("%lf,%lf",&latitudeDesti,&longtitudeDesti);
      //Degree convert to redia(redian=pi/180 *degree)
-    latitudeO*=(M_PI/180);
+    latitudo*=(M_PI/180);
     latitudeDesti*=(M_PI/180);
     longtitudeO*=(M_PI/180);
     longtitudeDesti*=(M_PI/180);
-
+    //find delta according instruction
+    delta=longtitudeDesti-latitudo;
+    //spherical law to find the distance
+    airDistance=acos(sin(longtitudeO) * sin(latitudeDesti) + cos(latitudo) * cos(latitudeDesti)*cos(delta)) *rediousEarth;
+    //origin and destination output convert to degree(degree=180/pi*redian)
+    printf("Origin = %lg degree , %lg degree\n",latitudo*=180/M_PI,longtitudeO*=180/M_PI);
+    printf("Destination = %lg degree, %lg degree\n",latitudeDesti*=180/M_PI, longtitudeDesti*=180/M_PI);
+    //distance result show in prompt
+    printf("Air distance is %lg Km\n",airDistance);
     return 0;
 }
